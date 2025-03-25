@@ -2,11 +2,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
+// middleware
+app.use(express.json());
 
 // routes
 const UserRoute = require('./Route/UserRoute');
-// use the UserRoute
+// use the UserRoute 
 app.use('/users', UserRoute);
+
+
 
 // listen to port 3000
 const port = 3000;

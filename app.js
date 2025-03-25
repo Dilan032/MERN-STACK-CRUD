@@ -1,5 +1,18 @@
 // DB password : mWFiDJtYQE4AXQ5Z
 
+// express
+const express = require('express');
+const app = express();
+
+// listen to port 3000
+const port = 3000;
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
+
+app.get('/', (req, res) => {
+    res.send('successful connection to the server!');
+});
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = "mongodb+srv://user1:mWFiDJtYQE4AXQ5Z@cruddb.c18zv.mongodb.net/?appName=crudDB";
